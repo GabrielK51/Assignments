@@ -21,5 +21,12 @@ Rect(162.5, 283, 37.5, 16.6, fill='white', border='black')
 Rect(200, 283, 37.5, 16.6, fill='white', border='black')
 Rect(237.5, 283, 37.5, 16.6, fill='white', border='black')
 
+#Gum
+
+#Oval(centerX, centerY, width, height)
+
+Oval(200, 283, 30, 30, fill=rgb(255, 161, 205))
+
 # Run program:
 cmu_graphics.run()
+
