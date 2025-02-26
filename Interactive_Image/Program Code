@@ -25,12 +25,8 @@ Circle(110,200,10,fill=rgb(240, 29, 29))
 Circle(200,180,10,fill=rgb(240, 29, 29))
 Circle(250,170,10,fill=rgb(240, 29, 29))
 Circle(270,200,10,fill=rgb(240, 29, 29))
-
+Polygon(200,200,350,200,200,50)
+        
 #visible = False
 
-
-
-
-
 cmu_graphics.run()
-
