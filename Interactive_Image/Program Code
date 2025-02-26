@@ -1,1 +1,36 @@
+from cmu_graphics import *
+
+#Pizza
+Circle(200,200,150,fill=rgb(255, 214, 92))
+Circle(200,200,135,fill=rgb(255, 194, 28))
+Circle(180,200,10,fill=rgb(240, 29, 29))
+Circle(125,250,10,fill=rgb(240, 29, 29))
+Circle(220,240,10,fill=rgb(240, 29, 29))
+Circle(250,270,10,fill=rgb(240, 29, 29))
+Circle(180,240,10,fill=rgb(240, 29, 29))
+Circle(170,270,10,fill=rgb(240, 29, 29))
+Circle(270,210,10,fill=rgb(240, 29, 29))
+Circle(250,200,10,fill=rgb(240, 29, 29))
+Circle(200,150,10,fill=rgb(240, 29, 29))
+Circle(140,200,10,fill=rgb(240, 29, 29))
+Circle(140,140,10,fill=rgb(240, 29, 29))
+Circle(175,175,10,fill=rgb(240, 29, 29))
+Circle(225,180,10,fill=rgb(240, 29, 29))
+Circle(270,130,10,fill=rgb(240, 29, 29))
+Circle(220,200,10,fill=rgb(240, 29, 29))
+Circle(210,130,10,fill=rgb(240, 29, 29))
+Circle(200,280,10,fill=rgb(240, 29, 29))
+Circle(120,170,10,fill=rgb(240, 29, 29))
+Circle(110,200,10,fill=rgb(240, 29, 29))
+Circle(200,180,10,fill=rgb(240, 29, 29))
+Circle(250,170,10,fill=rgb(240, 29, 29))
+Circle(270,200,10,fill=rgb(240, 29, 29))
+
+#visible = False
+
+
+
+
+
+cmu_graphics.run()
 
