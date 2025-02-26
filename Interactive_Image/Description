@@ -1,2 +1,4 @@
 For my projet I am going to be creating a pizza with 8 slices.
-Each time you click on a slice of pizza it disappears.
+Each time you click on a slice of pizza it disappears
+Im going to make it look like you are grabbing a slice of pizza and the function will be when you click on it a slice appears
+When you click the same slice that just appeared it will disappear
