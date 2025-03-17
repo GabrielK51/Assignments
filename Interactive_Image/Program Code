@@ -26,9 +26,19 @@ Circle(200,180,10,fill=rgb(240, 29, 29))
 Circle(250,170,10,fill=rgb(240, 29, 29))
 Circle(270,200,10,fill=rgb(240, 29, 29))
 
-Line(200,60,200,340) 
-Line(60,200,340,200)
+line1 = Line(200,60,200,340, visible = False)
+line2 = Line(60,200,340,200, visible = False)
 
+def onMousePress(x, y):
+    line1.visible = True
+    line2.visible = True
+
+
+Rect(200,200,150,150,fill='white')
+    
+
+
+    
 #First Slice
 #Polygon(200,200,200,0,400,200, fill=rgb(255, 194, 28), border='black')
 #Circle(225,175,10,fill=rgb(240, 29, 29))
