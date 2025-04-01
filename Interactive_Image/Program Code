@@ -25,13 +25,15 @@ Circle(110,200,10,fill=rgb(240, 29, 29))
 Circle(200,180,10,fill=rgb(240, 29, 29))
 Circle(250,170,10,fill=rgb(240, 29, 29))
 Circle(270,200,10,fill=rgb(240, 29, 29))
-
+   
 line1 = Line(200,60,200,340, visible = False)
 line2 = Line(60,200,340,200, visible = False)
 
+
 eaten_slice = Rect(200,200,150,150,fill='white', visible = False)
 eaten_slice2 = Rect(60,60,150,150,fill='white', visible = False)
-
+eaten_slice3 = Rect(60,200,150,150, fill='white', visible = False)
+ 
 click_count = 0
 
 def onMousePress(x, y):
@@ -43,7 +45,9 @@ def onMousePress(x, y):
     elif click_count == 1: 
         eaten_slice.visible = True
     elif click_count ==2:
-        eaten_slice2.visible = True 
+        eaten_slice2.visible = True
+    elif click_count ==3:
+        eaten_slice3.visible = True
 
     click_count += 1
 
