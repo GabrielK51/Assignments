@@ -8,3 +8,58 @@ title_text = Label("Reaction Time Tester", 200, 50, size=24, bold=True, fill="bl
 start_border = Rect(125, 300, 150, 60, fill='black')
 start_button = Rect(130, 305, 140, 50, fill='green')
 start_label = Label("Start", 200, 330, size= 20, bold=True, fill="white")
+
+#Reaction Text Display
+reaction_text = Label("", 200, 250, size=20, fill="black")
+
+#Game State Variables
+waiting = False
+countdown = 100
+reaction_timer = 0
+game_active = False
+app.background = 'white'
+
+def onMousePress(x, y):
+    global waiting, countdown, game_active, reaction_timer
+
+    # If Start button is clicked
+    if 130 <= x <= 270 and 305 <= y <= 355:
+        start_label.value = "Game Started!"
+        app.background = 'white'
+        waiting = True
+        countdown = 100
+        reaction_timer = 0
+        reaction_text.value = ""
+        game_active = True
+
+# If clicked when green
+    elif app.background == 'green' and game_active:
+        game_active = False
+        reaction_text.value = f"Your Reaction Time: {reaction_timer / 30:.2f} seconds"
+        app.background = 'white'
+        start_label.value = "Start"
+
+#If clicked too early
+    elif waiting and game_active:
+        game_active = False
+        waiting = False
+        app.background = 'red'
+        reaction_text.value = "Too early! Try again."
+        start_label.value = "Start"
+
+#Every Frame
+def onStep():
+    global countdown, waiting, reaction_timer
+
+    if waiting:
+        countdown -= 1
+        if countdown <= 0:
+            app.background = 'green'
+            waiting = False
+            reaction_timer = 0
+
+#If screen is green, count reaction time
+            if app.background == 'green':
+                reaction_timer += 1
+    
+cmu_graphics.run()
