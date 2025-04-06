@@ -1,1 +1,10 @@
+from cmu_graphics import *
 
+#Title
+title_border = Rect(50, 20, 300, 60, fill='black')
+title_background = Rect(55, 25, 290, 50, fill='lightblue')
+title_text = Label("Reaction Time Tester", 200, 50, size=24, bold=True, fill="black")
+
+start_border = Rect(125, 300, 150, 60, fill='black')
+start_button = Rect(130, 305, 140, 50, fill='green')
+start_label = Label("Start", 200, 330, size= 20, bold=True, fill="white")
