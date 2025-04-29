@@ -1,2 +1,7 @@
 The purpose of my program will be to test the speed of people who play the game. 
 My program will be a game that measures how fast a user can react to a changing screen color.
+A button that says start when pressed causes the game to start. After a certian amount of time the screen will go from white to green.
+When the green screen appears then the player has to click as fast as possible. Once they click the time that they took to press the screen after it turned green gets recorded
+You see the time it took you to react after the screen turned green at the end from miliseconds to seconds.
+But, if you press too early before the screen can change, the screen turns red and a message in the center appears, "Too Early, Try Again."
+At the end of the game if you click at the right timing, you can retry by pressing the start button again and the game restarts.
