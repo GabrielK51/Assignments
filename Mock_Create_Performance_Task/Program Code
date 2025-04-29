@@ -1,21 +1,22 @@
 from cmu_graphics import *
 
-#Title
+# Title
 title_border = Rect(50, 20, 300, 60, fill='black')
 title_background = Rect(55, 25, 290, 50, fill='lightblue')
 title_text = Label("Reaction Time Tester", 200, 50, size=24, bold=True, fill="black")
 
+# Start Button
 start_border = Rect(125, 300, 150, 60, fill='black')
 start_button = Rect(130, 305, 140, 50, fill='green')
-start_label = Label("Start", 200, 330, size= 20, bold=True, fill="white")
+start_label = Label("Start", 200, 330, size=20, bold=True, fill="white")
 
-#Reaction Text Display
+# Reaction Text Display
 reaction_text = Label("", 200, 250, size=20, fill="black")
 
-#Game State Variables
+# Game State Variables
 waiting = False
-countdown = 100
-reaction_timer = 0
+countdown = 100  # Countdown before screen turns green (in frames)
+reaction_timer = 0  # Timer to track reaction time
 game_active = False
 app.background = 'white'
 
@@ -27,19 +28,19 @@ def onMousePress(x, y):
         start_label.value = "Game Started!"
         app.background = 'white'
         waiting = True
-        countdown = 100
+        countdown = 100  # Reset countdown
         reaction_timer = 0
         reaction_text.value = ""
         game_active = True
 
-# If clicked when green
+    # If clicked when green (valid reaction)
     elif app.background == 'green' and game_active:
         game_active = False
-        reaction_text.value = f"Your Reaction Time: {reaction_timer / 30:.2f} seconds"
+        reaction_text.value = f"Your Reaction Time: {reaction_timer:.2f} seconds"
         app.background = 'white'
         start_label.value = "Start"
 
-#If clicked too early
+    # If clicked too early
     elif waiting and game_active:
         game_active = False
         waiting = False
@@ -47,7 +48,6 @@ def onMousePress(x, y):
         reaction_text.value = "Too early! Try again."
         start_label.value = "Start"
 
-#Every Frame
 def onStep():
     global countdown, waiting, reaction_timer
 
@@ -58,8 +58,8 @@ def onStep():
             waiting = False
             reaction_timer = 0
 
-#If screen is green, count reaction time
-            if app.background == 'green':
-                reaction_timer += 1
-    
+    elif app.background == 'green':
+        # Increment timer while waiting for user to click
+        reaction_timer += 1 / 60  # Assuming 60 FPS
+
 cmu_graphics.run()
